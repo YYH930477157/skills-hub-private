@@ -1,0 +1,17 @@
+services:
+  skillhub:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      SKILLHUB_SECRET: ${SKILLHUB_SECRET:-change-this-to-a-long-random-string}
+      SKILLHUB_PUBLIC_URL: ${SKILLHUB_PUBLIC_URL:-http://localhost:8000}
+      SKILLHUB_ORG: ${SKILLHUB_ORG:-Company SkillHub}
+      SKILLHUB_OWNER_EMAIL: ${SKILLHUB_OWNER_EMAIL:-skills@example.com}
+      SKILLHUB_PUBLIC_READ: ${SKILLHUB_PUBLIC_READ:-true}
+      SKILLHUB_DATA: /data
+    volumes:
+      - skillhub-data:/data
+
+volumes:
+  skillhub-data:
