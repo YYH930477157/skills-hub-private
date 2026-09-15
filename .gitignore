@@ -1,0 +1,16 @@
+data/
+*.db
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.env
+frontend/node_modules/
+frontend/dist/
+*.egg-info/
+dist/
+build/
+.DS_Store
+Thumbs.db
+/package-lock.json
